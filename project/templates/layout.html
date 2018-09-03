@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap 4 landing page</title>
+	 <!-- add bootstrap css file -->
+
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+
+</head>
+<body>
+
+{% block navigation %}
+
+<!-- navbar -->
+
+<nav class="navbar navbar-expand-lg fixed-top ">
+  <a class="navbar-brand" href="{{ url_for('home') }}">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    <ul class="navbar-nav mr-4">
+
+      <li class="nav-item">
+        <a class="nav-link" data-value="about" href="{{ url_for('about') }}">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " data-value="portfolio" href="{{ url_for('portfolio') }}">Portfolio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " data-value="blog" href="{{ url_for('blog') }}">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " data-value="team" href="{{ url_for('team') }}">Team</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " data-value="contact" href="{{ url_for('contact') }}">Contact</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+
+{% endblock %}
+
+
+<!-- header -->
+{% block header %}
+
+{% endblock %}
+<!-- about section -->
+{% block about %}
+
+{% endblock %}
+
+
+<!-- portfolio -->
+{% block portfolio %}
+
+{% endblock %}
+<!-- Posts section -->
+{% block blog %}
+
+{% endblock %}
+
+<!-- Team section -->
+{% block team %}
+
+{% endblock %}
+<!-- Contact form -->
+{% block contact %}
+
+{% endblock %}
+<!-- add Javasscript file from js file -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
